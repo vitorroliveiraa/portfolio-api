@@ -1,0 +1,73 @@
+/* body, html {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+} */
+
+#canvas {
+  display: block;
+  background: #0c1116;
+}
+
+#canvas::after {
+  z-index: 10;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background-image: radial-gradient(
+    rgba(36, 47, 61, 0) 10%,
+    rgba(36, 47, 61, 0.7) 100%
+  );
+}
+
+#divCard {
+  width: 29rem;
+  height: 11rem;
+  background: inherit;
+  background-color: rgb(111 113 128 / 25%);
+  bottom: 0;
+  box-shadow: rgb(54 151 205) 0px 0px 0px 4px, rgb(174 0 236) 0px 0px 0px 8px,
+    rgb(208 208 208) 0px 0px 0px 12px, rgb(111 85 76) 0px 0px 0px 17px,
+    rgb(216 182 0) 0px 0px 0px 20px;
+  /* box-shadow: inset 0 0 0 200px rgba(111, 113, 128, 0.685); */
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
+#divCard:before {
+  content: '';
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(111, 113, 128, 0.685);
+  filter: blur(5px);
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  #divCard {
+    width: auto;
+    height: 9rem;
+  }
+  #divCard p {
+    margin-bottom: 5px !important;
+    font-size: 20px;
+  }
+  #divCard h1 {
+    font-size: 40px;
+  }
+  #hero p span {
+    font-size: 20px;
+  }
+}
