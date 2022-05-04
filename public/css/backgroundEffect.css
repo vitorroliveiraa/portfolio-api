@@ -71,3 +71,11 @@ body {
     font-size: 20px;
   }
 }
+
+label {
+  cursor: pointer;
+}
+
+.sizeDefault {
+  font-size: 18px;
+}
