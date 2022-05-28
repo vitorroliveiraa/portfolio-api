@@ -1,0 +1,9 @@
+.d-flex-jc-ac {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.b-radius-8 {
+  border-radius: 8px;
+}
