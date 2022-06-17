@@ -7,3 +7,11 @@
 .b-radius-8 {
   border-radius: 8px;
 }
+
+.bd-color:hover {
+  box-shadow: 0 0 0 0.2rem rgb(20 157 221);
+}
+
+.bd-color.transition {
+  transition: all 100ms ease-in-out 0s;
+}

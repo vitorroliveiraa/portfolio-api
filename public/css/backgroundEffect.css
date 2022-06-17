@@ -22,7 +22,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  content: '';
+  content: "";
   background-image: radial-gradient(
     rgba(36, 47, 61, 0) 10%,
     rgba(36, 47, 61, 0.7) 100%
@@ -33,7 +33,7 @@ body {
   width: 29rem;
   height: 11rem;
   background: inherit;
-  background-color: rgb(111 113 128 / 25%);
+  background-color: rgb(111 113 128 / 30%);
   bottom: 0;
   box-shadow: rgb(54 151 205) 0px 0px 0px 4px, rgb(174 0 236) 0px 0px 0px 8px,
     rgb(208 208 208) 0px 0px 0px 12px, rgb(111 85 76) 0px 0px 0px 17px,
@@ -44,7 +44,7 @@ body {
 }
 
 #divCard:before {
-  content: '';
+  content: "";
   /* position: absolute; */
   top: 0;
   left: 0;

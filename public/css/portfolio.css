@@ -1,0 +1,44 @@
+.c-text {
+  color: #199dda;
+}
+
+.card-border {
+  border: 3px solid #173b6a;
+}
+
+.text-style {
+  margin-top: 0.5rem;
+  color: #173b6a;
+  font-weight: bold;
+  cursor: default;
+}
+
+.badge-style {
+  width: 6rem;
+  padding-bottom: 3px;
+  border: 3px solid #173b6a;
+  /* background-color: rgba(134, 173, 232, 15%); */
+}
+
+.color-spec {
+  color: #173b6a;
+}
+
+.card-footer-style {
+  padding: 0.4rem 0.4rem;
+  /* overflow: auto; */
+  /* white-space: nowrap; */
+}
+
+.change-bd:hover {
+  border: 3px solid #149ddd;
+}
+
+.change-bd.transition {
+  transition: all 100ms ease-in-out 0s;
+  /* property => duration => timing-function => delay */
+}
+
+.h-13 {
+  height: 13rem;
+}

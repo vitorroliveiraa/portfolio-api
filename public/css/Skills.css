@@ -1,0 +1,17 @@
+@media (min-width: 320px) {
+  #sectionSkills {
+    height: 15rem;
+  }
+}
+
+@media (min-width: 480px) {
+  #sectionSkills {
+    height: 13rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #sectionSkills {
+    height: 11rem;
+  }
+}

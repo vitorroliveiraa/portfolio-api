@@ -1,11 +1,5 @@
-/**
- * Template Name: iPortfolio - v3.7.0
- * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
 (function () {
-  ('use strict');
+  ("use strict");
 
   //#region
   window.onload = function () {
@@ -18,14 +12,14 @@
       maxMovement: 50,
       attractionRange: 400,
       attractionFactor: 0.06,
-      imagePath: '/img/nodejsBluee.png',
+      imagePath: "/img/nodejsBluee.png",
       imgWidth: 45,
       imgHeight: 42,
-      lineColor: 'rgba(23, 33, 43)',
+      lineColor: "rgba(23, 33, 43)",
       particleDensity: 0.2,
       particleChance: 0.2,
-      particleVelocity: 70,
-      particleColor: 'rgba(100, 159, 192,0.8)',
+      particleVelocity: 60,
+      particleColor: "rgba(100, 159, 192,0.8)",
       particleLength: 10,
       flashRadius: 28,
       flashOpacity: 0.6,
@@ -44,12 +38,12 @@
     var img = new Image();
     img.src = settings.imagePath;
 
-    var canvas = document.getElementById('canvas'),
-      ctx = canvas.getContext('2d');
+    var canvas = document.getElementById("canvas"),
+      ctx = canvas.getContext("2d");
 
     // resize the canvas to fill browser window dynamically
     var resizeTimer;
-    window.addEventListener('resize', resizeCanvas, false);
+    window.addEventListener("resize", resizeCanvas, false);
     function resizeCanvas() {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function () {
@@ -280,10 +274,10 @@
             point.y,
             1
           );
-          gradient.addColorStop(0, 'rgba(255, 255, 255, 0)');
+          gradient.addColorStop(0, "rgba(255, 255, 255, 0)");
           gradient.addColorStop(
             1,
-            'rgba(255, 255, 255, ' + point.flashOpacity + ')'
+            "rgba(255, 255, 255, " + point.flashOpacity + ")"
           );
           ctx.fillStyle = gradient;
           ctx.fill();
@@ -328,13 +322,13 @@
       return (p1.x - p2.x) * (p2.x - t.x) > 0;
     }
 
-    const typed = select('.typed');
+    const typed = select(".typed");
     if (typed) {
-      let typed_strings = typed.getAttribute('data-typed-items');
-      typed_strings = typed_strings.split(',');
+      let typed_strings = typed.getAttribute("data-typed-items");
+      typed_strings = typed_strings.split(",");
 
       setTimeout(() => {
-        new Typed('.typed', {
+        new Typed(".typed", {
           strings: typed_strings,
           loop: false,
           typeSpeed: 100,
@@ -377,13 +371,13 @@
    * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener);
+    el.addEventListener("scroll", listener);
   };
 
   /**
    * Navbar links active state on scroll
    */
-  let navbarlinks = select('#navbar .scrollto', true);
+  let navbarlinks = select("#navbar .scrollto", true);
   const navbarlinksActive = () => {
     let position = window.scrollY + 200;
     navbarlinks.forEach((navbarlink) => {
@@ -394,13 +388,13 @@
         position >= section.offsetTop &&
         position <= section.offsetTop + section.offsetHeight
       ) {
-        navbarlink.classList.add('active');
+        navbarlink.classList.add("active");
       } else {
-        navbarlink.classList.remove('active');
+        navbarlink.classList.remove("active");
       }
     });
   };
-  window.addEventListener('load', navbarlinksActive);
+  window.addEventListener("load", navbarlinksActive);
   onscroll(document, navbarlinksActive);
 
   /**
@@ -410,51 +404,51 @@
     let elementPos = select(el).offsetTop;
     window.scrollTo({
       top: elementPos,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
   /**
    * Back to top button
    */
-  let backtotop = select('.back-to-top');
+  let backtotop = select(".back-to-top");
   if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
-        backtotop.classList.add('active');
+        backtotop.classList.add("active");
       } else {
-        backtotop.classList.remove('active');
+        backtotop.classList.remove("active");
       }
     };
-    window.addEventListener('load', toggleBacktotop);
+    window.addEventListener("load", toggleBacktotop);
     onscroll(document, toggleBacktotop);
   }
 
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function (e) {
-    select('body').classList.toggle('mobile-nav-active');
-    this.classList.toggle('bi-list');
-    this.classList.toggle('bi-x');
+  on("click", ".mobile-nav-toggle", function (e) {
+    select("body").classList.toggle("mobile-nav-active");
+    this.classList.toggle("bi-list");
+    this.classList.toggle("bi-x");
   });
 
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
   on(
-    'click',
-    '.scrollto',
+    "click",
+    ".scrollto",
     function (e) {
       if (select(this.hash)) {
         e.preventDefault();
 
-        let body = select('body');
-        if (body.classList.contains('mobile-nav-active')) {
-          body.classList.remove('mobile-nav-active');
-          let navbarToggle = select('.mobile-nav-toggle');
-          navbarToggle.classList.toggle('bi-list');
-          navbarToggle.classList.toggle('bi-x');
+        let body = select("body");
+        if (body.classList.contains("mobile-nav-active")) {
+          body.classList.remove("mobile-nav-active");
+          let navbarToggle = select(".mobile-nav-toggle");
+          navbarToggle.classList.toggle("bi-list");
+          navbarToggle.classList.toggle("bi-x");
         }
         scrollto(this.hash);
       }
@@ -465,7 +459,7 @@
   /**
    * Scroll with ofset on page load with hash links in the url
    */
-  window.addEventListener('load', () => {
+  window.addEventListener("load", () => {
     if (window.location.hash) {
       if (select(window.location.hash)) {
         scrollto(window.location.hash);
@@ -492,15 +486,15 @@
   /**
    * Skills animation
    */
-  let skilsContent = select('.skills-content');
+  let skilsContent = select(".skills-content");
   if (skilsContent) {
     new Waypoint({
       element: skilsContent,
-      offset: '80%',
+      offset: "80%",
       handler: function (direction) {
-        let progress = select('.progress .progress-bar', true);
+        let progress = select(".progress .progress-bar", true);
         progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
+          el.style.width = el.getAttribute("aria-valuenow") + "%";
         });
       },
     });
@@ -509,29 +503,29 @@
   /**
    * Porfolio isotope and filter
    */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
+  window.addEventListener("load", () => {
+    let portfolioContainer = select(".portfolio-container");
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item',
+        itemSelector: ".portfolio-item",
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let portfolioFilters = select("#portfolio-flters li", true);
 
       on(
-        'click',
-        '#portfolio-flters li',
+        "click",
+        "#portfolio-flters li",
         function (e) {
           e.preventDefault();
           portfolioFilters.forEach(function (el) {
-            el.classList.remove('filter-active');
+            el.classList.remove("filter-active");
           });
-          this.classList.add('filter-active');
+          this.classList.add("filter-active");
 
           portfolioIsotope.arrange({
-            filter: this.getAttribute('data-filter'),
+            filter: this.getAttribute("data-filter"),
           });
-          portfolioIsotope.on('arrangeComplete', function () {
+          portfolioIsotope.on("arrangeComplete", function () {
             AOS.refresh();
           });
         },
@@ -544,13 +538,13 @@
    * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox',
+    selector: ".portfolio-lightbox",
   });
 
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
+  new Swiper(".portfolio-details-slider", {
     speed: 400,
     loop: true,
     autoplay: {
@@ -558,8 +552,8 @@
       disableOnInteraction: false,
     },
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
+      el: ".swiper-pagination",
+      type: "bullets",
       clickable: true,
     },
   });
@@ -567,17 +561,17 @@
   /**
    * Testimonials slider
    */
-  new Swiper('.testimonials-slider', {
+  new Swiper(".testimonials-slider", {
     speed: 600,
     loop: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
     },
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
+      el: ".swiper-pagination",
+      type: "bullets",
       clickable: true,
     },
     breakpoints: {
@@ -596,10 +590,10 @@
   /**
    * Animation on scroll
    */
-  window.addEventListener('load', () => {
+  window.addEventListener("load", () => {
     AOS.init({
       duration: 1000,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
       once: true,
       mirror: false,
     });
