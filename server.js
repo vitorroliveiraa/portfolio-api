@@ -168,10 +168,8 @@ app.post("/contact", (req, res) => {
     });
 });
 
-const port = 8080;
-
-app.listen(port, (err) => {
+app.listen(process.env.PORT || 5000, (err) => {
   if (err) console.error(err);
-  console.log("Server started on " + port);
-  console.log("-----------------------");
+  console.log(`Server started on http://localhost:${port}`);
+  console.log("------------------------------------------");
 });
