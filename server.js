@@ -168,7 +168,9 @@ app.post("/contact", (req, res) => {
     });
 });
 
-app.listen(process.env.PORT || 5000, (err) => {
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, (err) => {
   if (err) console.error(err);
   console.log(`Server started on http://localhost:${port}`);
   console.log("------------------------------------------");
