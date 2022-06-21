@@ -32,7 +32,7 @@ contactForm.addEventListener("submit", async (event) => {
   };
 
   try {
-    const response = await axios.post("http://localhost:8080/contact", {
+    const response = await axios.post("/contact", {
       contact,
     });
 
