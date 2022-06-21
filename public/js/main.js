@@ -15,7 +15,7 @@
       imagePath: "/img/nodejsBluee.png",
       imgWidth: 45,
       imgHeight: 42,
-      lineColor: "#1d2a",
+      lineColor: "#1e3e5c",
       particleDensity: 0.2,
       particleChance: 0.2,
       particleVelocity: 60,
