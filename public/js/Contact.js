@@ -61,7 +61,7 @@ contactForm.addEventListener("submit", async (event) => {
     setStatus(
       "Putzz, o e-mail não foi enviado 🤔! Bom, caso o erro persista entre em contato pelas redes sociais, fico no aguardo!"
     );
-    console.error(error);
+    console.log(error);
 
     btnSendEmail.removeAttribute("disabled");
   }
