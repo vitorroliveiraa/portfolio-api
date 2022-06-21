@@ -54,14 +54,16 @@ contactForm.addEventListener("submit", async (event) => {
       setStatus(
         "Putzz, o e-mail não foi enviado 🤔! Bom, caso o erro persista entre em contato pelas redes sociais, fico no aguardo!"
       );
+      setTimeout(hideStatus, 5000);
     }
-    // sendButton.removeAttribute("disabled");
+
     btnSendEmail.removeAttribute("disabled");
   } catch (error) {
     setStatus(
       "Putzz, o e-mail não foi enviado 🤔! Bom, caso o erro persista entre em contato pelas redes sociais, fico no aguardo!"
     );
     console.log(error);
+    setTimeout(hideStatus, 5000);
 
     btnSendEmail.removeAttribute("disabled");
   }
